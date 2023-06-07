@@ -1,0 +1,82 @@
+ name: Cron Job - Dev
+
+ on:
+   schedule:
+     - cron: '0 7,19 * * *'
+
+ jobs:
+   # single job that generates and outputs a common id
+   prepare:
+     runs-on: ubuntu-latest
+     outputs:
+       uuid: ${{ steps.uuid.outputs.value }}
+     steps:
+       - name: Generate unique ID
+         id: uuid
+         # take the current commit + timestamp together
+         # the typical value would be something like
+         # "sha-5d3fe...35d3-time-1620841214"
+         run: echo "::set-output name=value::sha-$GITHUB_SHA-time-$(date +"%s")"
+
+       - name: Print unique ID
+         run: echo "generated id ${{ steps.uuid.outputs.value }}"
+
+   cypress-run:
+     needs: ['prepare']
+     runs-on: ubuntu-latest
+     strategy:
+       fail-fast: false
+       matrix:
+         containers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+     steps:
+       - name: Get current date time
+         id: date
+         run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H:%M:%S')"
+       - name: Checkout
+         uses: actions/checkout@v2
+       - name: Chrome Browser run
+         uses: cypress-io/github-action@v4
+         with:
+           start: npm run
+           browser: chrome
+           wait-on-timeout: 300
+           record: true
+           parallel: true
+           ci-build-id: ${{ needs.prepare.outputs.uuid }}
+           tag: dev
+           spec: cypress/e2e/**
+           exclude_patterns: "cypress/e2e/slackIntegration/*"
+         env:
+           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+           CYPRESS_environment: dev
+           CYPRESS_keycloakSuperUserPassword: ${{ secrets.CYPRESS_KEYCLOAKSUPERUSERPASSWORD }}
+           #Dev env passwords
+           CYPRESS_keycloakSuperUserPassworddev: ${{ secrets.CYPRESS_KEYCLOAKSUPERUSERPASSWORDDEV }}
+           CYPRESS_serviceAccountPassworddev: ${{ secrets.CYPRESS_SERVICEACCOUNTPASSWORDDEV }}
+           CYPRESS_testUserCrmPassworddev: ${{ secrets.CYPRESS_TESTUSERCRMPASSWORDDEV }}
+           COMMIT_INFO_MESSAGE: Cron job for Dev Environment at UTC${{ steps.date.outputs.date }}
+
+       - name: Upload screenshot for failed Test Scripts
+         uses: actions/upload-artifact@v2
+         if: failure()
+         with:
+           name: cypress-screenshots
+           path: cypress/screenshots
+
+       # Test run video was always captured, so this action uses "always()" condition
+
+       - name: Upload video artifacts
+         uses: actions/upload-artifact@v2
+         if: always()
+         with:
+           name: cypress-videos
+           path: cypress/videos
+
+       # reports was always captured, so this action uses "always()" condition
+
+       - name: Upload report artifacts
+         uses: actions/upload-artifact@v2
+         if: always()
+         with:
+           name: cypress-junit
+           path: cypress/results/junit/**

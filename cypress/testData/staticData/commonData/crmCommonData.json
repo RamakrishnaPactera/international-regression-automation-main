@@ -1,0 +1,28 @@
+{
+    "kabobMenuOptions": {
+        "edit": "Edit",
+        "orderList": "Order List",
+        "crm": "CRM",
+        "logInteraction": "Log Interaction",
+        "scheduleInteraction": "Schedule Interaction",
+        "newOpportunity": "New Opportunity",
+        "spotQuote": "Spot Quote",
+        "routeList": "Route List",
+        "reAssign": "Reassign"
+    },
+    "filterByColumnType": {
+        "filterByEntityName": "Entity Name",
+        "filterByName": "Name",
+        "filterByStage": "Stage",
+        "filterByType": "Type",
+        "filterByStatus": "Status"
+
+    },
+    "filterColumnValue": {
+        "status" : "Scheduled",
+        "entityType": "Customer",
+        "entityName": "ABCarrier12",
+        "stage": "New Opportunity",
+        "noDocumentMsg": "No Opportunities Found"
+    }
+}

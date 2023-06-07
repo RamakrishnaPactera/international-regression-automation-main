@@ -1,0 +1,36 @@
+{
+    "test": {
+        "apiClientId": "https://test.mm100.mastermindtms.com/",
+        "apiUsername": "mastery-test@mastery.net",
+        "apiPassword": "",
+        "apiAuthUrl": "https://id.mm100nonprod.mastermindtms.com/auth/realms/test.mm100.mastermindtms.com/protocol/openid-connect/token",
+        "graphqlUrl": "https://graphql.test.mm100.mastermindtms.com/",
+        "minionGraphqlUrl": "https://minion-api.test.mm100.mastermindtms.com/graphql",
+        "mastermindUserId": "8ab090cf-0d2b-49fd-b1de-daa869c988e1"
+    },
+    "dev": {
+        "apiClientId": "https://dev.mm100.mastermindtms.com/",
+        "apiUsername": "mastery-test@mastery.net",
+        "apiPassword": "",
+        "apiAuthUrl": "https://id.mm100nonprod.mastermindtms.com/auth/realms/dev.mm100.mastermindtms.com/protocol/openid-connect/token",
+        "graphqlUrl": "https://graphql.dev.mm100.mastermindtms.com/",
+        "minionGraphqlUrl": "https://minion-api.dev.mm100.mastermindtms.com/graphql",
+        "mastermindUserId": "985c9d3f-9345-4763-84b8-9b8fbd07cf13"
+    },
+    "td": {
+        "apiClientId": "https://test.td100.mastermindtms.com/",
+        "apiUsername": "mastery-test@mastery.net",
+        "apiPassword": "",
+        "apiAuthUrl": "https://id.td100nonprod.mastermindtms.com/auth/realms/test.td100.mastermindtms.com/protocol/openid-connect/token",
+        "graphqlUrl": "https://graphql.test.td100.mastermindtms.com/",
+        "minionGraphqlUrl": "https://minion-api.test.td100.mastermindtms.com/graphql",
+        "mastermindUserId": "9490bbda-b833-4290-b104-5ca528262316"
+    },
+    "uatMolo": {
+        "apiClientId": "qa",
+        "apiAuthUrl": "https://id.ml100nonprod.mastermindtms.com/auth/realms/test.ml100.mastermindtms.com/protocol/openid-connect/token",
+        "graphqlUrl": "https://graphql.test.ml100.mastermindtms.com/",
+        "minionGraphqlUrl": "https://minion-api.test.ml100.mastermindtms.com/graphql",
+        "mastermindUserId": "42cd9cda-0af8-46d9-957c-82e12cd7a07f"
+    }
+}

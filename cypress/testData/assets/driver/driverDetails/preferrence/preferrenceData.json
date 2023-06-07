@@ -1,0 +1,38 @@
+{
+    "expectedData": {
+        "destination2": "Destination Region",
+        "destination1": "DST",
+        "destinationCity": "Mexico, MX",
+        "destinationCityDropDown": "Upper Atlantic",
+        "originType1": "OST",
+        "originType2": "Origin Region",
+        "originCity": "New York, NY",
+        "originCityDropDown": "California",
+        "toolTip": "If checked, indicates that the driver will accept additional stops on this route not listed above.",
+        "preferenceValues": [
+            "---",
+            "Denied",
+            "Not Preferred",
+            "Preferred"
+        ],
+        "reasonValues": [
+            "---",
+            "HOS",
+            "Locations"
+        ],
+        "stopTypeValue": "City, ST",
+        "stopTypeValue1": "Facility",
+        "stopCityValue": "Chicago, IL",
+        "editStopCityValue": "Chicago Lawn, IL",
+        "stopsFacilityValue": "acme - canada",
+        "cityValue": "Chicago",
+        "stateValue": "IL"
+    },
+    "userDefined": {
+        "txtRepsField": "testautomation1 TestAutomation1"
+    },
+    "staticData": {
+        "alertMsgForDeletePreferredLane": "Are you sure you want to delete this Preferred Lane?",
+        "alertMsgForDeletePreferredRoute": "Are you sure you want to delete this Preferred Route?"
+    }
+}

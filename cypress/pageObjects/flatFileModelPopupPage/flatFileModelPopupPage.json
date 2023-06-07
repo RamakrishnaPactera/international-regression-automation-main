@@ -1,0 +1,12 @@
+{
+  "uploadBtnInput": "input[type='file']",
+  "dataSourceContinueBtn": "button[class*='datasource-continue']",
+  "matchYesBtn": ".header-match-yes",
+  "primaryBtn": ".primary",
+  "finalConfirmYesBtn": "button[id=final-close-include]",
+  "fileUploadAcknowledgeMsg": "[class='modal-header'] h4",
+  "fileUploadAcknowledgeOkBtn": "button[id=upload-success-modal-acknowledge]",
+  "routingGuideIFrame": "[class='flatfile-component'][style] [src*='https://portal-2.flatfile']",
+  "unResolvedPopup": "[class='primaryTextColor']",
+  "unResolvedPopupContinueBtn": "[id='final-close-ignore']"
+}

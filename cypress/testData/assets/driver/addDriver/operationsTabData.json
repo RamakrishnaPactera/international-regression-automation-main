@@ -1,0 +1,18 @@
+{
+  "expectedData": {
+    "driverTimeOffEmptyTable": "Driver Time-Off Details Not Available"
+  },
+  "staticData": {
+    "colHeaderTimeOffData": [
+      "Type",
+      "Start Date",
+      "End Date",
+      "Notes"
+    ],
+    "colHeaderUtilizationData": [
+      "Opportunity",
+      "Contact",
+      "Rep"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+﻿serialNo,tdmRequirement,scenario,customerCode,orderReference,pickUpFacilityCode,deliveryFacilityCode,carrierCode,vendorCode,driverDispatched
+1,addCostRateLineItem,common1,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES
+2,addCostRateLineItem,commonLoad,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES
+3,addCostRateLineItem,costRateLineWithVendor,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{approvedCarrierCertCTPAT}},YES

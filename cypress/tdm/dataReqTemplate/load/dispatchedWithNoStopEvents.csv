@@ -1,0 +1,5 @@
+serialNo,tdmRequirement,scenario,customerCode,orderReference,pickUpFacilityCode,deliveryFacilityCode,carrierCode,vendorCode,driverDispatched
+1,dispatchedWithNoStopEvents,driverDispatchedCommon,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES
+2,dispatchedWithNoStopEvents,createDriver,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES
+3,dispatchedWithNoStopEvents,driverDispatchPopulateMinField,{{customerWithPopulateField}},{{orderRefCommon}},{{facilityPickUpHaymarketPark}},{{facilityDeliveryTdPark}},{{carrierCodeHuskerTruck}},,YES
+4,dispatchedWithNoStopEvents,driverDispatchedCheck,{{customerDriverDispCheck}},{{orderRefCommon}},{{facilityPickUpHaymarketPark}},{{facilityDeliveryTdPark}},{{carrierCodeHuskerTruck}},,YES

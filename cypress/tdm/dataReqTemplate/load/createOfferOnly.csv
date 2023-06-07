@@ -1,0 +1,5 @@
+﻿serialNo,tdmRequirement,scenario,customerCode,orderReference,pickUpFacilityCode,deliveryFacilityCode,carrierCode,vendorCode,driverDispatched,offerType
+1,createOfferOnly,createActiveOffer,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{vendorCodeCommon}},,Active
+2,createOfferOnly,createDeclinedOffer,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{vendorCodeCommon}},,Declined
+3,createOfferOnly,createCounteredOffer,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{vendorCodeCommon}},,Countered
+4,createOfferOnly,createVendorActiveOffer,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{vendorCodeCommon}},,Active

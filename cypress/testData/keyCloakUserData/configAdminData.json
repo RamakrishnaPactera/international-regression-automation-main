@@ -1,0 +1,9 @@
+
+{
+    "releaseLockTxt" : "Release Route Lock", 
+    "adminTxt" : "Admin",
+    "releaseLocksTab": "Release Locks",
+    "userAccessTab": "User Access",
+    "keycloakBtn": "KEYCLOAK",
+    "keycloakTitle": "Keycloak Admin Console"
+}

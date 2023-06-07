@@ -1,0 +1,11 @@
+{
+  "atlantaGACity": "Atlanta, GA",
+  "invalidFilepath": "cypress/fixtures/InValidRoutingGuide.csv",
+  "rateQuote": "RateQuote",
+  "rateQuoteUrlPart1": "https://alchemy-data-api.",
+  "rateQuoteUrlPart2": ".mm100.mastermindtms.com/export/RateQuote",
+  "targetFile": "cypress/fixtures/targetFile.csv",
+  "validAndInvalidDataFilePath": "cypress/fixtures/ValidAndInvalidRoutingGuide.csv",
+  "validFilepath": "cypress/fixtures/ValidRoutingGuide.csv",
+  "apiURL": "https://data-upload.dev.mm100.mastermindtms.com/download-csv-report/"
+}

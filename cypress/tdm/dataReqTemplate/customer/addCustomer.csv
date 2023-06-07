@@ -1,0 +1,16 @@
+﻿serialNo,tdmRequirement,scenario,customerStatus,customerLevelType,customerOpportunityType,cargoInsurance,liabilityInsurance,generalInsurance,creditStatus,creditLimit,creditExpired,relatedCarrier,relatedFacility,city,state,street1,postalCode,country,invoiceDistributionMethodId,opportunityReq,opprStageTerm,opprStatusTerm,generalContact,contactReq
+1,addCustomer,customerCommon,Active,Silver,Gold,YES,YES,YES,Approved,99999999,NO,,,,,,,,,,,,,
+2,addCustomer,customerNew,New,Silver,Gold,YES,YES,YES,Approved,99999999,NO,{{carrierCodeCommon}},,,,,,,,,,,,
+3,addCustomer,customerActive,Active,,,YES,YES,YES,Denied,9998800,NO,{{carrierCodeCommon}},{{pickUpFacilityCodeCommon}},,,,,,,,,,,
+4,addCustomer,customerInactive,Inactive,,,,,,Hold,88,YES,,{{pickUpFacilityCodeCommon}},,,,,,,,,,,
+5,addCustomer,customerSuspended,Suspended,,,YES,YES,YES,,,,{{carrierCodeCommon}},,,,,,,,,,,,
+5,addCustomer,customerWithIncorrectAddr,Active,Silver,Gold,YES,YES,YES,Approved,99999999,NO,{{carrierCodeCommon}},{{pickUpFacilityCodeCommon}},Lincoln,NE,403 Line Drive Circle,68588,US,,,,,,
+6,addCustomer,customerWithInvMethEDI,Active,Silver,Gold,YES,YES,YES,Approved,99999999,NO,,,,,,,,EDI,,,,,
+7,addCustomer,customerWithInvMethNoPrint,Active,Silver,Gold,YES,YES,YES,Approved,99999999,NO,,,,,,,,No Print,,,,,
+8,addCustomer,customerWithInvMethEmail,Active,Silver,Gold,YES,YES,YES,Approved,99999999,NO,,,,,,,,Print,,,,,
+9,addCustomer,customerDuplicate,Duplicate,Silver,Gold,YES,YES,YES,Approved,99999999,NO,,,,,,,,Print,,,,,
+10,addCustomer,customerNewOppr,Active,Silver,Gold,YES,YES,YES,Approved,99999999,NO,,,,,,,,,YES,New Opportunity,Open,,
+11,addCustomer,customerClosedLostOppr,Active,Silver,Gold,YES,YES,YES,Approved,99999999,NO,,,,,,,,,YES,Closed Lost,Closed,
+12,addCustomer,customerOnHoldOppr,Active,Silver,Gold,YES,YES,YES,Approved,99999999,NO,,,,,,,,,YES,Revisit/Future Opportunity,On Hold,
+13,addCustomer,customerWithoutGeneralContact,Active,Silver,Gold,YES,YES,YES,Approved,99999999,NO,,,,,,,,,,,,NO,
+14,addCustomer,customerWithContact,Active,Silver,Gold,YES,YES,YES,Approved,99999999,NO,,,,,,,,,,,,,YES

@@ -1,0 +1,7 @@
+{
+  "expectedData": {
+    "reviewTxt": "Review",
+    "continueTxt": "Continue",
+    "fileUploadSuccessMsg": "File has been submitted for processing."
+  }
+}

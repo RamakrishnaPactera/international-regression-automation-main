@@ -1,0 +1,17 @@
+{
+    "ordersActivationDropDown": {
+        "activationActive": "Active",
+        "activationHold": "Hold",
+        "activationCancel": "Canceled",
+        "activationHoldReasonDropDown": {
+            "reasonQualityHold": "Quality Hold"
+        },
+        "activationCancelReasonDropDown": {
+            "reasonCredit": "Credit Exceeded"
+        }
+    },
+    "loadStatusReason": {
+        "activeStatusReasonVal": "null",
+        "canceledStatusReasonVal": "Credit Exceeded"
+    }
+}

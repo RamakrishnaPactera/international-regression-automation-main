@@ -1,0 +1,9 @@
+﻿serialNo,tdmRequirement,scenario,customerCode,orderReference,pickUpFacilityCode,deliveryFacilityCode,carrierCode,driverDispatched,invDistributionMethod,paymentTerms,truckMode,sizeId,division
+1,addOrderInvoice,invCommon,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},YES,,,,,
+2,addOrderInvoice,invWithEmailAndNet15,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},YES,Email,Net 15,,,
+3,addOrderInvoice,invWithEDIAndNet15,MBC01,{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},YES,EDI,Net 15,,,
+4,addOrderInvoice,invWithNoPrintAndNet15,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},YES,No Print,Net 15,,,
+5,addOrderInvoice,orderwithRail,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},NO,,,Rail,LTL,Asset
+6,addOrderInvoice,orderwithAir,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},YES,,,Air,Partial,Managed
+7,addOrderInvoice,orderwithIntermodal,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},YES,,,Intermodal,,
+8,addOrderInvoice,orderwithOcean,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},YES,,,Ocean,,

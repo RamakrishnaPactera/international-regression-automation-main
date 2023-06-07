@@ -1,0 +1,51 @@
+{
+  "expectedData": {
+    "matchesSharePopupTitle": "Share This Match",
+    "placeholderText": "Search",
+    "routesSharePopupTitle": "Share This Route",
+    "sendButtonText": "Send",
+    "sharePopupSubTitle": "Sharing:",
+    "truckSharePopupTitle": "Share This Truck",
+    "shareMessageTitle": "Share Message"
+  },
+  "staticData": {
+    "atlantaGAOriginLocation": "Atlanta, GA",
+    "txtMessage" : "Message",
+    "matchObject": "Match",
+    "maxODHVal": "200mi",
+    "maxODHValue": "200 mi",
+    "placeholderAttr": "placeholder",
+    "routeObject": "Route",
+    "txtSuccess": " shared successfully!",
+    "txtFailure": " not shared. Please try again later.",
+    "truckObject": "Truck",
+    "tdmAddCarrierReq": "addCarrier",
+    "tdmAttachStopsOnlyReq": "attachStopsOnly",
+    "tdmCarrierCommonScenario": "carrierCommon",
+    "tdmCarrierData": "carrier",
+    "tdmCommonStopsCreationScenario": "commonStopsCreation",
+    "tdmErrorDescription": "Skipping the test case because TDM was unable to create the data. TDM response : ",
+    "tdmLoadData": "load",
+    "truckCapacity": "V | 53 ft",
+    "truckLength": "53 ft",
+    "sidebarRepSearchType": "Rep",
+    "readyCityTitle": "title"
+  },
+  "userDefinedData": {
+    "messageText": "Hi Test Message",
+    "slackUser": "Pradeep Challa",
+    "slackUserWithLowercase": "pradeep challa",
+    "slackUserWithUppercase": "PRADEEP CHALLA",
+    "specialCharsVal": "@&%&@",
+    "withNoSlackUser": "WithNoSlackUser",
+    "multipleUsersToSelect": [
+      "Sourabh Charwande",
+      "Diksha Baranwal",
+      "Bhatt Krishna",
+      "Pradeep Challa",
+      "Sannija Sadu",
+      "Ramakrishna Chavala",
+      "sainathreddy"
+    ]
+  }
+}

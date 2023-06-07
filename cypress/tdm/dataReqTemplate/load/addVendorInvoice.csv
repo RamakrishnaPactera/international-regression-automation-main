@@ -1,0 +1,8 @@
+﻿serialNo,tdmRequirement,scenario,customerCode,orderReference,pickUpFacilityCode,deliveryFacilityCode,carrierCode,vendorCode,driverDispatched,invoiceStatus
+1,addVendorInvoice,vendorInvCommon,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,
+2,addVendorInvoice,vendorInvWithStatusException,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Exception
+3,addVendorInvoice,vendorInvWithStatusApproved,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Approved
+4,addVendorInvoice,vendorInvWithStatusPending,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Pending
+5,addVendorInvoice,vendorInvWithStatusDenied,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Denied
+6,addVendorInvoice,vendorInvWithRLCCovered,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,NO,Approved
+7,addVendorInvoice,vendorInvWithVendor,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{approvedCarrierCertCTPAT}},YES,Approved

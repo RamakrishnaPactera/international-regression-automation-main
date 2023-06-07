@@ -1,0 +1,4 @@
+﻿serialNo,tdmRequirement,scenario,trainingsRequired,maxRows,typeTerm
+1,addDriver,driverCommon,,,
+2,addDriver,driverTrainingDefaultMaxRows,YES,7,ELD
+3,addDriver,driverTrainingExpndMaxRows,YES,19,ELD

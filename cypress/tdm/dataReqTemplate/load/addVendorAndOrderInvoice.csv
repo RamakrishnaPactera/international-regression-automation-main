@@ -1,0 +1,6 @@
+﻿serialNo,tdmRequirement,scenario,customerCode,orderReference,pickUpFacilityCode,deliveryFacilityCode,carrierCode,vendorCode,driverDispatched,truckMode,sizeId,division
+1,addVendorAndOrderInvoice,invCommon,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,,,
+2,addVendorAndOrderInvoice,orderwithRail,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,NO,Rail,LTL,Asset
+3,addVendorAndOrderInvoice,orderwithAir,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Air,Partial,Managed
+4,addVendorAndOrderInvoice,orderwithIntermodal,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Intermodal,,
+5,addVendorAndOrderInvoice,orderwithOcean,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Ocean,,

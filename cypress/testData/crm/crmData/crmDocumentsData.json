@@ -1,0 +1,79 @@
+{
+  "staticData": {
+    "dataColumnFilterAttrVal": "data-column-filter",
+    "dataTestIdAttrVal": "data-testid",
+    "documetcolumnTableArray": [
+      "Document Name",
+      "Type",
+      "Direction",
+      "Details",
+      "Uploaded By",
+      "Uploaded Date/Time",
+      "Updated By",
+      "Updated Date/Time"
+    ],
+    "documentsCustomizedTableArray": [
+      "Document Name",
+      "Type",
+      "Details",
+      "Direction",
+      "Uploaded By",
+      "Uploaded Date/Time",
+      "Updated By",
+      "Updated Date/Time"
+    ],
+    "minionDrpDwnDocumentDirection": "customerCrmDocumentsDirection",
+    "minionDrpDwnDocumentType": "customerCrmDocumentsType",
+    "modeVal": "downloadIcon",
+    "notesDownloadAttr": "aria-disabled",
+    "toasterMessage": "Carrier CRM document uploaded successfully",
+    "tdmAddCarrierReq": "addCarrier",
+    "tdmAddCustomerReq": "addCustomer",
+    "tdmCarrierData": "carrier",
+    "tdmCarrierScenario": "carrierCommon",
+    "tdmCustomerData": "customer",
+    "tdmCustomerNewScenario": "customerCommon",
+    "typeAttrVal": "type",
+    "valueAttr": "value",
+    "tdmCustomerScenario": "customerCommon"
+  },
+  "userDefinedData": {
+    "documentFileUploadTargetFile": "cypress/fixtures/documentsTab.docx",
+    "documentFileUploadTargetFile2": "cypress/fixtures/newDocumentsTab.docx",
+    "downloadIconViewMode": "downloadIcon",
+    "downloadOptionViewMode": "downloadOption",
+    "modeValNo": "No",
+    "modeValYes": "Yes",
+    "notesOperationsValue": "Operations",
+    "notesUserNameValue": "testautomation1 TestAutomation1",
+    "tabledocumentName": "documentsTab.docx",
+    "txtFieldNotesInvalidValue": "InvalidData",
+    "txtFieldNotesUpdatedValue": "Test Updated",
+    "txtFieldNotesValue": "Test",
+    "txtFieldDocDetailsValue": "Test",
+    "txtFieldDocDetailsValueUpdated": "Test updated",
+    "txtFieldDocDetailsValueLatestUpdated": "New Test updated",
+    "projectedVolume": "100",
+    "totalOppRev": "100",
+    "totalOppVolume": "100",
+    "oppDetails": "new",
+    "projectedMargin": "20",
+    "projectedRevenue": "100"
+  },
+  "expectedData": {
+    "buttonValue": "button",
+    "createdByDateValue": "Date/Time-column-filter",
+    "createdByValue": "Created By-column-filter",
+    "msgNoDocumentsFound": "No Documents Found",
+    "notesDownloadValue": "true",
+    "repFilterValue": "Rep-column-filter",
+    "searchValue": "search",
+    "updatedByDateValue": "Updated Date/Time-column-filter",
+    "updatedByValue": "Updated By-column-filter"
+  },
+  "filterSelectionData": {
+    "typeFilter": "Accessorial Agreement",
+    "Direction": "InBound",
+    "noDocumentMsg": "No Documents Found"
+  }
+}

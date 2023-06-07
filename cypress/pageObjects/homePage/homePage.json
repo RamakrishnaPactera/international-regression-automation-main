@@ -1,0 +1,59 @@
+{
+  "addNew": {
+    "addStopBT": "[data-testid='btn-new-stop']",
+    "dtPickeContainer": ".react-datepickermonth-container",
+    "dtPicker": ".react-datepickermonth",
+    "loadEquipments": "[data-testid='order-equipment']",
+    "loadEquipmentsList": "#downshift-4-input",
+    "loadSaveBtn": "#load-stop-save",
+    "orderSaveBT": "#load-order-save",
+    "puDate": "[name='availableStart.value']",
+    "puSearch": "[data-testid='facility-search']"
+  },
+  "btnDriverSave": "[data-testid='driver-save-button']",
+  "dashBoardButton": "button:contains('Dashboard')",
+  "capacityTab":{
+    "labelSharePopupDetails": "[data-testid='share-modal-sub-title']",
+    "truckKebabMenu":"[data-testid='bottom-tabs'] [data-rowindex='0'] button[title='Open the Context Menu']",
+    "tblTruckDistanceVal": "[data-testid='bottom-tabs'] [data-rowindex='0'] [data-cellheader='dst']",
+    "tblTruckReadyCityVal": "[data-testid='bottom-tabs'] [data-rowindex='0'] [data-cellheader='Ready City']",
+    "tblTruckODHVal":"[data-testid='bottom-tabs'] [data-rowindex='0'] [data-cellheader='Max ODH']",
+    "tblTruckDateVal":"[data-testid='bottom-tabs'] [data-rowindex='0'] [data-cellheader='Date']",
+    "tblTruckEquipmentVal": "[data-testid='bottom-tabs'] [data-rowindex='0'] [data-cellheader='Equip']",
+    "tblTruckTimeVal": "[data-testid='bottom-tabs'] [data-rowindex='0'] [data-cellheader='Time']"
+  },
+  "masteryLogo": "[data-testid=logo]",
+  "myMatchesTab": "[data-walkme='mymatchestab']",
+  "myMatches": {
+    "iconsRouteOrigin": "[data-testid='share-modal-sub-title'] >div:nth-of-type(2) div>div>p:nth-of-type(1) svg",
+    "iconsRouteDestination": "[data-testid='share-modal-sub-title'] >div:nth-of-type(2) div>div>p:nth-of-type(2) svg",
+    "iconsTruckOrigin": "[data-testid='share-modal-sub-title'] >div:nth-of-type(2) >p svg"
+  },
+  "matchKebabMenu": "[data-table-id='my-matches-v2']  [data-rowindex='0'] button[title='Open the Context Menu']",
+  "resourcesMenu": "[data-testid='base-nav'] button:contains('Resources')",
+  "resourcesDDO": {
+    "driverNew": "[data-testid=nav-link-add-driver]",
+    "driverSearch": "[data-testid=nav-link-search-driver]",
+    "trailerNew": "[data-testid='nav-link-asset-trailer-add']",
+    "trailerSearch": "[data-testid='nav-link-asset-trailer-search']"
+  },
+  "quickSearch": {
+    "btnSharePopupTo": "[data-testid='share-modal-select-emp'] button",
+    "btnSidebarDialogPopupClose": "[role='dialog'] [data-testid='dialog-close']",
+    "dialogPopupSidebarShareModel": "[role='dialog']",
+    "btnSidebarShareModelPopupTo": "[data-testid='share-modal-select-emp'] [data-testid='expand']",
+    "drpdwnSidebarSearchType": "[data-testid='search-type-dropdown']",
+    "iconSidebarChat": "[data-testid='slack-employee-tree-chat']",
+    "txtFieldShareMsgNote": "[data-testid='share-modal-msg'] [data-testid='detailsId']",
+    "txtFieldSidebarRepSearch": "[data-testid='sidebar-rep-search-input']",
+    "titleSidebarLoggedInUserName": "[data-testid='sidebar'] [data-testid='employee-node-tooltip']"
+  },
+  "txtFieldDriverFirstName": "[data-fieldnameprop='firstName'] input",
+  "txtFieldDriverLastName": "[data-fieldnameprop='lastName'] input",
+  "txtFieldAddDriverCode": "[data-fieldnameprop='code'] input",
+  "txtFieldPhoneNumber": "[data-fieldnameprop='phoneNumber'] input",
+  "drpdwnPhoneNumCountry": "[data-fieldnameprop='phoneNumber'] [name='phoneNumberCountry']",
+  "infoTagFirstName": "[data-testid='firstName-tooltip-icon']",
+  "infoTagLastName": "[data-testid='lastName-tooltip-icon']",
+  "infoTagCode": "[data-testid='code-tooltip-icon']"
+}

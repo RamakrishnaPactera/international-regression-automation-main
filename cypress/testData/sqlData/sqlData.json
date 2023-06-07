@@ -1,0 +1,53 @@
+{
+  "sqlData": {
+    "driverKey": "4zWJeY4WgGe6MvdyWs4B9VU8",
+    "drivertestdatabase": "DriverGeneral",
+    "drivertestuser": "DriverGeneral",
+    "testcarrierquery": "SELECT top(01) [id] ,[entity_id] ,[eid],[created_by],[created_at]FROM [MasteryCrm].[dbo].[carrier_export_note]ORDER BY created_at DESC",
+    "testcustomerquery": "SELECT top(01) [id] ,[entity_id] ,[eid],[created_by],[created_at]FROM [MasteryCrm].[dbo].[customer_export_note]ORDER BY created_at DESC",
+    "testdatabase": "MasteryCrm",
+    "testDriverPowerQuery": "Select pp.code as power, dr.code from Driver dr inner join DriverPermanentPowerMapping dp on dr.id = dp.driverId inner join Power pp on dp.powerId = pp.powerId WHERE dr.code = '",
+    "testDriverTrailerQuery": "Select dt.code as trailerCode, dr.code from Driver dr inner join DriverPermanentTrailerMapping dpt on dr.id = dpt.driverId inner join Trailer dt on dpt.trailerId = dt.trailerId WHERE dr.code = '",
+    "testDriverSearchQuery": "select * from [dbo].[DriverWeeklyTargetMapping] where driverid = '",
+    "testDriverDailyActivityAddRecordQuery": "select weekDay from dbo.DriverDailyActivityMapping where weeklyTargetId='603d517a-2541-4875-bd64-7ed05422e6f3'",
+    "testDriverHistoryTrainingQuery": "SELECT dt.typeTerm, dt.dueDate, dt.completedDate, dt.outcomeTerm, dt.trainerName, dt.description from  Driver dr inner join DriverTrainingMapping dt on dt.driverId = dr.id WHERE dr.code = '",
+    "testportVal": 1433,
+    "testserver": "sqlalias-mm100-dev.database.windows.net",
+    "testuser": "MasteryCrm",
+    "testDriverGeneralInfoQuery":" SELECT ",
+    "testDriverQuery":"SELECT name FROM sys.columns WHERE object_id = OBJECT_ID('Driver')",
+    "testDriverTimeOffMapping":"SELECT name FROM sys.columns WHERE object_id = OBJECT_ID('DriverTimeOffMapping')",
+    "testDriverEquipmentMapping":"SELECT name FROM sys.columns WHERE object_id = OBJECT_ID('DriverEquipmentMapping')",
+    "testDriverIdentifierMapping":"SELECT name FROM sys.columns WHERE object_id = OBJECT_ID('DriverIdentifierMapping')",
+    "testDriverCertificationOrPermitMapping":"SELECT name FROM sys.columns WHERE object_id = OBJECT_ID('DriverCertificationOrPermitMapping')",
+    "testDriverAwardMapping":"SELECT name FROM sys.columns WHERE object_id = OBJECT_ID('DriverAwardMapping')",
+    "testDriverScheduleMapping":"SELECT name FROM sys.columns WHERE object_id = OBJECT_ID('DriverScheduleMapping')",
+    "driverWeeklyTargetquery": "SELECT top(01) [id], createdAt, updatedAt, weekStartDate, targetDays from DriverWeeklyTargetMapping ORDER BY createdBy DESC",
+    "powerTestUser": "PowerGeneral",
+    "powerTestPassword": "sfhTWu6g78ZPki4Gwdo7Pagn",
+    "powerTestEquipmentQuery": "SELECT name FROM sys.columns WHERE object_id = OBJECT_ID('PowerEquipmentMapping')",
+    "powerTestFleet" : "SELECT name FROM sys.columns WHERE object_id = OBJECT_ID('PowerFleetMapping')",
+    "powerTestMaitenance" : "SELECT name FROM sys.columns WHERE object_id = OBJECT_ID('PowerMaintenanceMapping')",
+    "powerTestIdentifier": "SELECT name FROM sys.columns WHERE object_id = OBJECT_ID('PowerIdentifierMapping')"
+    },
+    "driverTestPassword":"4zWJeY4WgGe6MvdyWs4B9VU8",
+    "driverAddressMappingQuery":"SELECT isActive FROM [dbo].[DriverAddressMapping]",
+    "driverAwardMappingQuery":"SELECT isActive FROM [dbo].[DriverAwardMapping]",
+    "driverCertificationOrPermitMappingQuery":"SELECT isActive FROM [dbo].[DriverCertificationOrPermitMapping]",
+    "driverContactMappingQuery":"SELECT isActive FROM [dbo].[DriverContactMapping]",
+    "driverEquipmentMappingQuery":"SELECT isActive FROM [dbo].[DriverEquipmentMapping]",
+    "driverFleetMappingQuery":"SELECT isActive FROM [dbo].[DriverFleetMapping]",
+    "driverIdentifierMappingQuery":"SELECT isActive FROM [dbo].[DriverIdentifierMapping]",
+    "driverPermanentPowerMappingQuery":" SELECT isActive FROM [dbo].[DriverPermanentPowerMapping]",
+    "driverPermanentTrailerMappingQuery":" SELECT isActive FROM [dbo].[DriverPermanentTrailerMapping]",
+    "driverRepsMappingQuery":"SELECT isActive FROM [dbo].[DriverRepsMapping] ",
+    "driverScheduleMappingQuery":"SELECT isActive FROM [dbo].[DriverScheduleMapping]",
+    "driverTimeOffMappingQuery":"SELECT isActive FROM [dbo].[DriverTimeOffMapping]",
+  "mongoseData": {
+    "testcollectionName": "RGValidated",
+    "testdbName": "csvfilestorage",
+    "testmongose": {
+      "_id": "e30e8c4c-809c-4ab1-a2dc-c498af20f313_1"
+    }
+  }
+}

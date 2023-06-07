@@ -1,0 +1,36 @@
+﻿serialNo,tdmRequirement,scenario,customerCode,orderReference,pickUpFacilityCode,deliveryFacilityCode,carrierCode,vendorCode,driverDispatched,chargeType,chargePerItem,units
+1,addCostLineItemOnly,chargeTypeWhiteGlove,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,White Glove,125,2
+2,addCostLineItemOnly,chargeTypeUpCharge,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Up Charge,125,2
+3,addCostLineItemOnly,chargeTypeTankerEndorsement,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Tanker Endorsement,125,2
+4,addCostLineItemOnly,chargeTypePalletExchange,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Pallet Exchange,125,2
+5,addCostLineItemOnly,chargeTypeScaleTicket,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Scale Ticket,125,2
+6,addCostLineItemOnly,chargeTypeSpecialCharge,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Special Charge,125,2
+7,addCostLineItemOnly,chargeTypeOverDimensional,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Over Dimensional,250,2
+8,addCostLineItemOnly,chargeTypeLimitedAccess,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Limited Access,250,2
+9,addCostLineItemOnly,chargeTypeLiftGate,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Lift Gate,250,2
+10,addCostLineItemOnly,chargTypeLateFee,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Late Fee,250,2
+11,addCostLineItemOnly,chargTypeHighCargoValue,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,High Cargo Value,125,2
+12,addCostLineItemOnly,chargTypeGuaranteedService,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Guaranteed Service,125,2
+13,addCostLineItemOnly,chargTypeDropTrailerCharge,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Drop Trailer Charge,125,2
+14,addCostLineItemOnly,chargTypeDriverAssist,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Driver Assist,125,2
+15,addCostLineItemOnly,chargTypeCustomsFees,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Customs Fees,125,2
+16,addCostLineItemOnly,chargTypeBorderCrossing,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Border Crossing,125,2
+17,addCostLineItemOnly,chargTypeBondedCarrier,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Bonded Carrier,125,2
+18,addCostLineItemOnly,chargTypeBlindShipment,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Blind Shipment,125,2
+19,addCostLineItemOnly,chargTypeDetentionLoading,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Detention Loading,125,2
+20,addCostLineItemOnly,chargTypeDetentionUnloading,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Detention Unloading,125,2
+21,addCostLineItemOnly,chargeTypeHazmat,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Hazmat,125,2
+22,addCostLineItemOnly,chargeTypeLayover,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Layover,125,2
+23,addCostLineItemOnly,chargeTypeLumper,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Lumper,125,2
+24,addCostLineItemOnly,chargeTypeTeamService,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Team Service,125,2
+25,addCostLineItemOnly,chargeTypeStopOffCharge,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Stop Off Charge,125,2
+26,addCostLineItemOnly,chargeTypeFuelSurcharge,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Fuel Surcharge,125,2
+27,addCostLineItemOnly,chargeTypePerMile,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Per Mile,125,2
+28,addCostLineItemOnly,chargeTypeFlatRate,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Flat Rate,125,2
+29,addCostLineItemOnly,chargeTypeLinehaul,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Linehaul,125,2
+30,addCostLineItemOnly,chargeTypeFlatRate1,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Flat Rate,1500,1
+31,addCostLineItemOnly,chargeTypeFlatRate,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Flat Rate,125,1
+32,addCostLineItemOnly,chargeTypeLinehaul,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,YES,Linehaul,125,2
+33,addCostLineItemOnly,costLineItemWithVendor,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{approvedCarrierCertCTPAT}},YES,Per Mile,125,2
+34,addCostLineItemOnly,chargTypeFlatRate2,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,NO,Flat Rate,125,2
+28,addCostLineItemOnly,costLineItemWithNoDriver,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},,NO,Flat Rate,125,2

@@ -1,0 +1,12 @@
+{
+  "tabAdminMenu": "[data-testid='base-nav'] button:contains('Admin')",
+  "tabUserAccess": "[data-valuetext='User Access']",
+  "txtSearchUser": "[data-ng-model='query.search']",
+  "btnSearchUser": ".input-group-addon",
+  "lnkSelectUserId": "[ng-repeat='user in users'] td",
+  "tabRoleMapings": ".ng-binding button:contains('Role Mapings')",
+  "tableRemoveAssignedRoles": "#assigned [ng-repeat='r in realmMappings | orderBy:'name'']",
+  "btnRemovedSelectedRoles": ".fa.fa-angle-double-left button:contains('Remove selected')",
+  "tableAddRoles": "#available [ng-repeat='r in realmRoles | orderBy:'name'']",
+  "btnAddSelectedRoles": ".fa.fa-angle-double-left button:contains('Add selected')"
+}

@@ -1,0 +1,87 @@
+//---------------------------------------------------------------------------------------------------------------
+//List to all Data to create Bussiness Info title for Contact With SaveAndClose below Minion terms//
+//Test Cases List
+//Authored By                   : Murali
+//Date                          : 09-05-2023
+//Functions/Calling References  : contactPage,commonData,crmIndustryData,crmContactsData,utilities
+//Test cases Included           : ME-146620 Verify the Contact object screen is navigated when the user clicks on the manager hyperlink in the business information tab in the contact object screen for Add | Edit Contacts > CRMV2 > Customer | Carrier
+//---------------------------------------------------------------------------------------------------------------
+
+import {
+  generateRandomNumber,
+  getMinionValues,
+  getTDMData,
+  viewFullPage,
+  waitSometime,
+} from '../../../../../utilities/commonUtils/genericUtils';
+import commonData from '../../../../../testData/staticData/commonData/commonData.json';
+import { loginToApplication } from '../../../../../utilities/appSpecificUtils/loginUtils/loginUtils';
+import crmContactsData from '../../../../../testData/crm/crmData/crmContactsData.json';
+import {
+  addNewContact,
+  navigateToTheCrmV2TabCustomer,
+  editContactBusinessInfoTab,
+  editContactBusinessInfoAllFieldsAndSave,
+  verifyBusinessInformationAllFieldsSaved,
+  verifyManagerHyperlinkClickAtBusinessInformation,
+} from '../../../../../utilities/customerUtils/customerUtils';
+import { verifyMailId } from '../../../../../utilities/crmUtils/crmUtils';
+const { shortWait, longWait } = commonData;
+const {
+  email,
+  phoneNo,
+  prefixTxt,
+  tdmAddCustomerReq,
+  tdmCustomerData,
+  tdmCustomerScenario,
+} = crmContactsData.staticData;
+
+const { userName: usernameText, password: passwordText } = Cypress.env('users')[Cypress.env('appLoginUser')];
+
+let contactDepName, randomContactName, randomPhNo, newContactTabEmailVal, newContactTabPhoneVal;
+
+describe('Can I create New Contact in the contacts Tab > Customer > CRMV2 > Contacts Tab > Contact', () => {
+  beforeEach(() => {
+    getMinionValues('contactDepartment', 1).then((contactDepartment) => {
+      contactDepName = contactDepartment[0];
+    });
+
+    getTDMData({ dataType: tdmCustomerData, dataCondition: tdmAddCustomerReq, dataScenario: tdmCustomerScenario });
+    loginToApplication({ username: usernameText, password: passwordText });
+    viewFullPage();
+    randomContactName = prefixTxt + generateRandomNumber();
+    randomPhNo = phoneNo + generateRandomNumber();
+    cy.log(randomPhNo);
+    //newContactTabPhoneVal = verifyPhone({ textType: randomPhNo });
+    newContactTabPhoneVal = ({ textType: randomPhNo });
+    cy.log(newContactTabPhoneVal);
+    newContactTabEmailVal = verifyMailId({ textType: email });
+    cy.log(newContactTabEmailVal);
+  });
+
+  it('ME-146620 Verify the Contact object screen is navigated when the user clicks on the manager hyperlink in the business information tab in the contact object screen for Add | Edit Contacts > CRMV2 > Customer | Carrier', {
+    tags: [
+      '@Customer',
+      '@crmv2',
+      '@customerContacts',
+      '@p1',
+      '@phase1',
+    ],
+  },
+  () => {
+    navigateToTheCrmV2TabCustomer({ typeTextVal: tdmCustomerData });
+    cy.log('***Create Add New Contact in Customer***');
+    waitSometime(shortWait);
+    addNewContact({ contactName: contactDepName, randomName: randomContactName, phoneNo: randomPhNo, emailId: newContactTabEmailVal });
+    cy.log('*** Editing Contact Created and Moving towards Business Information Tab ***');
+    editContactBusinessInfoTab({ contactName: contactDepName, randomName: randomContactName, phoneNo: randomPhNo, emailId: newContactTabEmailVal });
+    //toastMsg();
+    waitSometime(longWait);
+    cy.log('*** Add values to all the fields  at Business Information Tab  and Save ***');
+    editContactBusinessInfoAllFieldsAndSave({ contactName: contactDepName, randomName: randomContactName, phoneNo: randomPhNo, emailId: newContactTabEmailVal });
+    cy.log('*** Verified all the fields at Business Information Tab and also at Contact grid columns value ***');
+    verifyBusinessInformationAllFieldsSaved({ contactName: contactDepName, randomName: randomContactName, phoneNo: randomPhNo, emailId: newContactTabEmailVal });
+    cy.log('*** Verify Manager Hyperlink and Move to BusinessInfo Screen ***');
+    verifyManagerHyperlinkClickAtBusinessInformation({ contactName: contactDepName, randomName: randomContactName, phoneNo: randomPhNo, emailId: newContactTabEmailVal });
+  });
+});

@@ -1,0 +1,5 @@
+{
+  "ordersSectionExpandBtn": "[data-testid='load-pane-orders'] [data-testid='row-expand']",
+  "ordersDialogBox":"[role='dialog']",
+  "ordersContextMenu":"[data-table-id='load-orders'] [data-scope='load:order:edit'] [data-testid='menu-button-table-actions']"
+}

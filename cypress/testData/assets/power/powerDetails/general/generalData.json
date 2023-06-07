@@ -1,0 +1,8 @@
+{
+  "expectedData": {},
+  "staticData": {
+    "minionDrpDwnDivision": "division",
+    "minionDrpDwnBusinessUnit": "businessUnit"
+  },
+  "userDefinedData": {}
+}

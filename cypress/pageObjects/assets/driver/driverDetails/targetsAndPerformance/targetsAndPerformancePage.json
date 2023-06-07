@@ -1,0 +1,47 @@
+{
+    "dailyActivityTbl":"[data-testid='driver-form'] div div[class='css-6hxnfa']:nth-child(2)",
+    "dailyActivityTblHeader":"[data-table-id='driver-target-daily-activity'] [data-testid='table-thead']",
+    "dailyActivityTblHeaderNames":"[data-table-id='driver-target-daily-activity'] [data-testid='table-thead'] [role='columnheader']",
+    "deleteBtn":"[data-contextmenukey='Delete']",
+    "drpdwnCarrotBtnWeeklyTargetInExpand": "[role='dialog'] [data-testid='menu-button-table-actions']",
+    "editBtn":"[data-contextmenukey='Edit']",
+    "weeklyActivityTbl":"[data-testid='driver-form'] div div[class='css-137p6pt']:nth-child(2)",
+    "weeklyActivityTblHeader": "[data-testid='driver-form'] div div[class='css-137p6pt']:nth-child(2) [data-testid='row-col-headers']",
+    "weeklyActivityTblHeaderNames":"[data-testid='driver-form'] div div[class='css-137p6pt']:nth-child(2) [data-testid='row-col-headers'] [role='columnheader']",
+    "weeklyTargetAddBtn":"[data-testid='table-add-new']",
+    "weeklyTargetCarrotBtn":"[data-testid='driver-weekly-target-table'] [data-testid='menu-button-table-actions']",
+    "weeklyTargetExpandViewColHeader":"[role='dialog'] [data-testid='row-col-headers']",
+    "weeklyTargetExpandViewColHeaderNames":"[role='dialog'] [data-testid='row-col-headers'] [role='columnheader'][data-walkme]",
+    "weeklyTargetMenuBtn":"[data-testid='menu-button-table-0']",
+    "weeklyTargetTargetDaysColVal":"[data-cellheader*='Target Days']",
+    "weeklyTargetTbl":"[data-testid='driver-form'] div div[class='css-137p6pt']:nth-child(1)",
+    "weekOfHeaderValue":"[data-cellheader='Week Of']",
+    "weeklyActivityWeekOfHeader": "[data-table-id='driver-targets-weekly-activity'] [data-cellheader='Week Of']",
+    "lblWeekStarting":"[for='weekStarting']",
+    "lblReccuringWeek":"[data-fieldnameprop='recurringWeeks'] .css-brpy62 ",
+    "lblExpDate":"[for='weekExpDate']",
+    "lblTargetDays":"[data-fieldnameprop='days'] .css-brpy62",
+    "lblTargetLoadedMi":"[data-fieldnameprop='loadedMiles'] .css-brpy62",
+    "lblTargetMTMi":"[data-fieldnameprop='emptyMiles'] .css-brpy62",
+    "lblTargetRevenue":"[data-fieldnameprop='revenue'] .css-brpy62",
+    "weeklyTargetAddPopup":{
+        "addDialogPopupTitle":"[id='driver-target-weekly-target-table-in-form-dialog-dialog'] [data-testid='dialog-close']+div",
+        "addWeeklyTargetBtn":"[data-testid='dialog-confirm']",
+        "recurringWeeksTxtBx":"[name='recurringWeeks']",
+        "targetDaysTxtBx":"[name='days']",
+        "targetLoadedMiTxtBx":"[name='loadedMiles']",
+        "targetMtMiTxtBx":"[name='emptyMiles']",
+        "targetRevenueTxtBx":"[name='revenue']",
+        "weekStartingTxtBx":"[id='weekStarting']"
+    },
+    "tabsOfTargetsAndPerformance": {
+        "tabWeeklytarget": "[data-testid='driver-weekly-target-table']",
+        "tabEvents": "[role='tablist'] button:contains('Events')",
+        "tabPay": "[role='tablist'] button:contains('Pay')",
+        "tabDailyActivity": "div:contains('Daily Activity')",
+        "tabRouteList": "[data-table-title='driver-targets-routes']",
+        "tabWeeklyActivity": "div:contains('Weekly Activity')"
+    },
+    "btnRoueListCustomCarrot" :"[data-testid='driver-targets-route-table'] [data-testid='menu-button-table-actions'], [role='dialog'] [data-testid='menu-button-table-actions']"
+    
+}

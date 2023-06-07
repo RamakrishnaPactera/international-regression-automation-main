@@ -1,0 +1,12 @@
+﻿serialNo,tdmRequirement,scenario,customerCode,orderReference,pickUpFacilityCode,deliveryFacilityCode,carrierCode,vendorCode,driverDispatched
+1,attachCarrierAndVendor,commonVendor,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},NTEC01,
+2,attachCarrierAndVendor,vendorDoNotLoad,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{doNotLoadVendor}},
+3,attachCarrierAndVendor,vendorOnHold,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{onHoldVendor}},
+4,attachCarrierAndVendor,vendorOnDenied,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{onDeniedVendor}},
+5,attachCarrierAndVendor,vendorNotApproved,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{notApprovedVendor}},
+6,attachCarrierAndVendor,vendorArePending,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{arePendingVendor}},
+7,attachCarrierAndVendor,vendorExperiesTentant,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{tentantExpVendor}},
+8,attachCarrierAndVendor,vendorInsuranceExp,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{expInsuranceVendor}},
+9,attachCarrierAndVendor,vendorInsufficient,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{insufficientVendor}},
+10,attachCarrierAndVendor,vendorNoPPW,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{approvedCarrierCertCTPAT}},YES
+11,attachCarrierAndVendor,vendorLoad,{{customerCodeCommon}},{{orderRefCommon}},{{pickUpFacilityCodeCommon}},{{deliveryFacilityCodeCommon}},{{carrierCodeCommon}},{{approvedCarrierCertCTPAT}},

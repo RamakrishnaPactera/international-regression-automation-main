@@ -1,0 +1,45 @@
+﻿serialNo,tdmRequirement,scenario,facilityStatus,relatedCarrier,city,state,street1,postalCode,country
+1,addFacility,facilityCommon,active,,,,,,
+2,addFacility,facilityActive,active,{{relatedCarrierCommon}},,,,,
+3,addFacility,facilityDuplicate,duplicate,,,,,,
+4,addFacility,facilityInactive,inactive,,,,,,
+5,addFacility,facilityNew,New,{{relatedCarrierCommon}},,,,,
+6,addFacility,facilityWithWasillaAK,active,,Wasilla,AK,13878 W ARMSTRONG Rd,99623,USA
+7,addFacility,facilityWithBolingbrookIL,active,,Bolingbrook,IL,1355 Remington Blvd,60490,USA
+8,addFacility,facilityWithCantWellAK,active,,Cantwell,AK,210 Parks Hwy,99729,USA
+9,addFacility,facilityWithChampaignIL,active,,Champaign,IL,702 N Mattis Ave,61821,USA
+10,addFacility,originFacility,active,,,,,,
+11,addFacility,destinationFacility,active,,,,,,
+12,addFacility,facilityChicago,active,,Chicago,,,,
+13,addFacility,facilityWithSitkaAK,active,,Sitka,AK,327 Seward St,99835,USA
+14,addFacility,facilityWithBoiseID,active,,Boise,ID,1106 W State St,83702,USA
+15,addFacility,facilityWithFairbanksAK,active,,Fairbanks,AK,1800 Airport Way,99701,USA
+16,addFacility,facilityWithSeattleWA,active,,Seattle,WA,6515 California Ave Sw,98136,USA
+17,addFacility,facilityWithAnchorageAK,active,,Anchorage,AK,3104 Seward Highway,99503,USA
+18,addFacility,facilityWithTallahasseeFL,active,,Tallahassee,FL,2540 N Monroe Street,32303,USA
+19,addFacility,facilityWithJuneauAK,active,,Juneau,AK,8777 Glacier Highway,99801,USA
+20,addFacility,facilityWithMesaAZ,active,,Mesa,AZ,325 W Southern Ave,85210,USA
+21,addFacility,facilityWithLincolnNE,active,,Lincoln,NE,2929 State Fair Park Drive,68504,USA
+22,addFacility,facilityWithHelenaMT,active,,Helena ,MT,1350 Cedar Street,59601,USA
+23,addFacility,facilityWithLasCrucesNM,active,,LasCruces,NM,2821 N Telshor Blvd,88011,USA
+24,addFacility,facilityWithPortlandOR,active,,Portland,OR,520 SW 6th Ave,97204,USA
+25,addFacility,facilityWithAlbuquerqueNM,active,,Albuquerque,NM,2103 Menaul Blvd NE,87107,USA
+26,addFacility,facilityWithAtlantaGA,active,,Atlanta,GA,3535 Peachtree Rd,30326,USA
+27,addFacility,facilityWithScottsbluffNE,active,,Scottsbluff,NE,814 W 27th Street,69361,USA
+28,addFacility,facilityWithPhoenixAZ,active,,Phoenix,AZ,8930 N 7th Street,85020,USA
+29,addFacility,facilityWithOmahaNE,active,,Omaha,NE,10780 M Street,68127,USA
+30,addFacility,facilityWithRenoNV,active,,Reno,NV,5015 S Mccarran Blvd,89502,USA
+31,addFacility,facilityWithSanBernardinoCA,active,,SanBernardino,CA,4414 University Parkway,92407,USA
+32,addFacility,facilityWithChapelHillNC,active,,Chapel Hill,NC,50040 Governors Drive,27517,USA
+33,addFacility,facilityWithLosAngelesCA,active,,LosAngeles,CA,712 S Los Angeles St,90014,USA
+34,addFacility,facilityWithScottsdaleAZ,active,,Scottsdale,AZ,15560 N Frank Lloyd Wright Blvd,85260,USA
+35,addFacility,facilityWithMiamiFL,active,,Miami,FL,165 SE 3rd AVE,33131,USA
+36,addFacility,facilityWithTempeAZ,active,,Tempe,AZ,808 South Priest Drive,85281,USA
+37,addFacility,facilityWithDallasTX,active,,Dallas,TX,3426 Oak Lawn Ave,75219,USA
+38,addFacility,facilityWithTucsonAZ,active,,Tucson,AZ,3999 E Grant Road,85712,USA
+39,addFacility,facilityWithDesMoinesIA,active,,DesMoines,IA,3030 Ingersoll Ave,50312,USA
+40,addFacility,facilityWithChicagoIL,active,,Chicago,IL,750 N Wells Street,60654,USA
+41,addFacility,facilityWithMexicoCityCMX,active,,Mexico City,CMX,Street 345,12445,MEX
+42,addFacility,facilityWithQuebecQC,active,,Quebec,QC,1151 Rue Saint-jean,G1R1S3,CAN
+43,addFacility,facilityWithSpoonerWI,active,,Spooner,WI,813 Scribner St,54801,USA
+44,addFacility,facilityWithIndianapolisIN,active,,Indianapolis,IN,155 King St,46201,USA

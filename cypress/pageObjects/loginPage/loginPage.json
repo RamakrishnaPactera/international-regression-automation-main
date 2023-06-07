@@ -1,0 +1,11 @@
+{
+  "showEmail": "[id='show-email']",
+  "usernameField": "[name='username']",
+  "passwordField": "[name='password']",
+  "loginButton": "[id='kc-login']",
+  "masteryLoginBtn": "#social-mastermind",
+  "microsoftLoginUrl": "https://login.microsoftonline.com/",
+  "ssoUsernameField": "[name='loginfmt']",
+  "nextBtn": "[id='idSIButton9']",
+  "ssoPasswordField": "[name='passwd']"
+}

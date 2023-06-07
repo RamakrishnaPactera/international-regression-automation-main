@@ -1,0 +1,12 @@
+node_modules/
+cypress/videos/
+examples/*/cypress/videos
+examples/*/cypress/screenshots
+results.json
+*.PNG
+convert.js
+jsontoxls.js
+cypress/reports/
+cypress/tdm/dataBackup
+cypress.env.json
+cypress.config.js

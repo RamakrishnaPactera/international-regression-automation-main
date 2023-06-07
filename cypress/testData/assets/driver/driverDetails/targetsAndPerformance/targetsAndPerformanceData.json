@@ -1,0 +1,77 @@
+{
+  "expectedData": {
+    "recurringWeekVal": "0",
+    "targetDaysVal": "1",
+    "weekDayVal": "5",
+    "weeklyTargetAddPopupTitle": "Add New Weekly Target",
+    "weeklyTargetRequiredField":"Atleast one target field is required",
+    "WeekstartdateMsg":"Weekstartdate is required.",
+    "weeklyTargetDeleteConfirmMsg":"Are you sure you want to delete this Weekly Target?",
+    "weeklyTargetEditPopupTitle": "Edit Weekly Target",
+    "weekDay": "monday",
+    "weeklyActivityColHeaders": [
+      "Week Of",
+      "Target Days",
+      "Days",
+      "Target Loaded Mi",
+      "Loaded Mi",
+      "Target MT Mi",
+      "MT Mi",
+      "Total Mi",
+      "Target Rev",
+      "Actual Rev",
+      "Base Pay",
+      "Fuel",
+      "Accessorials",
+      "Total Pay"
+    ],
+    "weeklyTargetsHeaders":[
+      "Week Of",
+      "Target Days",
+      "Target Loaded Mi",
+      "Target MT Mi",
+      "Target Rev"
+    ],
+    "dailyActivityHeaders":[
+      "Day",
+      "Hours",
+      "MT Miles",
+      "LD Miles",
+      "Tot Miles",
+      "Revenue"
+    ],
+    "eventsHeaders": [
+      "Event",
+      "Stop",
+      "City",
+      "ST",
+      "Exp Dt Tm",
+      "Act Dt Tm",
+      "Trailer"
+    ],
+    "routeListHeaders": [
+      "RLC",
+      "Route #",
+      "RAS",
+      "Order #",
+      "OAS",
+      "OTS",
+      "Mode",
+      "Size",
+      "Equip",
+      "Customer",
+      "Main Cust Rep",
+      "PU Date",
+      "Shipper",
+      "Origin City",
+      "OST",
+      "Dist",
+      "STOPS",
+      "Consignee",
+      "Dest City",
+      "DST",
+      "Del Date",
+      "Carrier"
+    ]
+  }
+}

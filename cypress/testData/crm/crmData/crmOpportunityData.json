@@ -1,0 +1,10 @@
+{
+  "staticData":{
+    "minionDrpDwnType": "customerCrmOpportunityType",
+    "opportunitiesTableFirstRowAttr": "data-row-selected",
+    "opportunitiesTypeDropDownValue": "New Business"
+  },
+  "userDefinedData": {
+    "opportunitiesFirstRowSelectedAttrValue": "true"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "loadDrawerCloseArrow": "[aria-label='Close the drawer']",
+  "searchTab": "[data-testid='nav-link-load-search']"
+}

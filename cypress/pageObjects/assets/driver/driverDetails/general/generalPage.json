@@ -1,0 +1,32 @@
+{
+  "fleetAddBtn": "[data-table-id='driver-fleet'] button[data-testid='table-add-new']",
+  "fleetShowInactiveChkBx": "[data-table-title='driver-fleet'] [name='showInactive']",
+  "fleetTblFleetVal": "[data-cellheader='Fleet']",
+  "fleetTblExpDateVal": "[data-cellheader='Exp. Date']",
+  "fleetTypeInTable": "[data-testid='fleet-table'] [data-cellheader='Type']",
+  "fleetPopup": {
+    "effectiveDateTxtBx": "[data-fieldnameprop='effectiveDate'] input",
+    "expirationDateTxtBx": "[data-fieldnameprop='expirationDate'] input",
+    "nameDrpDwn": "[data-fieldnameprop='carrier']",
+    "addFleetRelationshipBtn": "[data-testid='dialog-confirm']",
+    "txtFieldName": "[data-fieldnameprop='carrier'] input",
+    "infoTagEffDate": "[data-testid='effectiveDate-tooltip-icon']",
+    "infoTagCarrier": "[data-testid='carrier-tooltip-icon']",
+    "spanTypeTerm": "[data-fieldnameprop='typeTerm'] label span:eq(1)",
+    "spanCarrier": "[data-fieldnameprop='carrier'] label span:eq(1)"
+  },
+  "disabledDriverStatus": "[data-fieldname='statusTerm']",
+  "titleIdentifier": "[data-testid='driver-table'] button:contains('Identifier')",
+  "titlePlannedTimeOff": "[data-table-id='drivers-timeOff'] div:contains('Planned Time Off')",
+  "titleFleetRelationships": "[data-testid='fleet-table'] div:contains('Fleet Relationships')",
+  "fleetTypeVal": "[data-testid='fleet-table'] [role='row'] [data-cellheader='Type']",
+  "fleetType": "[data-testid='fleet-type']",
+  "drpDwnUserAccountMenu": "[data-testid='base-nav'] .css-1rekfto [aria-haspopup='true']",
+  "btnLogOut": "[data-valuetext='Log Out']",
+  "btnAddFleetDisabled": "[data-table-id='driver-fleet'] [data-icon='plus']",
+  "kebabFleetmenu": "[data-table-id='driver-fleet'] [data-cellheader='Menu'] [role='img'] path",
+  "disabledDriverHOSRule": "[data-fieldname='hosRuleTerm']",
+  "disabledDriverPower": "[data-fieldnameprop='permanentPowerUnitCode'] [data-readonly='true']",
+  "disabledDriverTrailer": "[data-testid='permanentTrailerCodes']",
+  "disabledDriverTerminal": "[data-fieldname='terminalName']"
+}

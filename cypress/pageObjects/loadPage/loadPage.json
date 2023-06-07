@@ -1,0 +1,6 @@
+{
+    "btnProcureTab": "[data-testid='procure']",
+    "btnShare": "[data-contextmenukey='Share']",
+    "btnSharePopupSend": "[data-testid='share-modal-btn-submit']",
+    "truckKebabMenu": "[data-testid='matches-table'] [data-testid='menu-button-table-0']"
+}

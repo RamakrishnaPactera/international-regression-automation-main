@@ -1,0 +1,4 @@
+{
+    "expandBtn": "[data-testid='menu-button-table-actions-expand']",
+    "closeBtn": "[data-testid='dialog-close']"
+}

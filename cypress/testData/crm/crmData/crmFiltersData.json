@@ -1,0 +1,26 @@
+{
+    "filtersData": {
+        "selectFilterColumn": [
+            "Status",
+            "Name",
+            "Entity Type",
+            "Entity Name",
+            "Stage",
+            "Division",
+            "Business Unit(s)",
+            "Proj Vol",
+            "Proj Rev",
+            "Age",
+            "Due Date",
+            "Updated By",
+            "Updated Date/Time"
+            
+        ],
+        "Status": "Scheduled",
+        "Name": "Test",
+        "entityType": "Customer",
+        "entityName": "ABCarrier12",
+        "stage": "New Opportunity",
+        "noDocumentMsg": "No Opportunities Found"
+    }
+}

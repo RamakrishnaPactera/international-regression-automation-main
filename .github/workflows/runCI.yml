@@ -1,0 +1,193 @@
+name: In Sprint Regression Suite Execution
+
+on:
+  workflow_dispatch:
+    inputs:
+      specfiles:
+        description: Define spec path
+        required: true
+        default: cypress/e2e/**
+        exclude_patterns:
+          - /slackIntegration/
+      environment:
+        description: Select Environment
+        required: true
+        type: choice
+        options:
+          - dev
+          - test
+      containers:
+        description: "Containers"
+        required: true
+      appLoginUser:
+        description: "Select LoginUser For MasterMind"
+        required: true
+        type: choice
+        options:
+          - keyCloakSuperUser
+          - serviceAccount
+      grepTags:
+        description: "Test tags E.g @west or @west+@P1"
+        required: false
+env:
+  INPUT_ENVIRONMENT: ${{ github.event.inputs.environment }}
+# on:
+#   schedule:
+#     - cron: '*/60 * * * *'
+
+# on:
+#   push:
+#     branches: [ main ]
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      uuid: ${{ steps.uuid.outputs.value }}
+    steps:
+      - name: Generate unique ID
+        id: uuid
+        # take the current commit + timestamp together
+        # the typical value would be something like "sha-5d3fe...35d3-time-1620841214"
+        run: echo "::set-output name=value::sha-$GITHUB_SHA-time-$(date +"%s")"
+
+      - name: Print unique ID
+        run: echo "generated id ${{ steps.uuid.outputs.value }}"
+  get-containers:
+    name: get-containers
+    runs-on: ubuntu-latest
+    outputs:
+      containers: ${{ steps.set-containers.outputs.containers }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: set container
+        id: set-containers
+        run: |
+          for (( i=1; i <= ${{ github.event.inputs.containers }}; i++ ))
+          do
+            arr+="$i," 
+          done  
+          echo "::set-output name=containers::["${arr[@]::-1}"]"
+
+  cypress-run-test-env:
+    if: (github.event.inputs.environment == 'test')
+    runs-on: ubuntu-latest
+    needs: ["get-containers", "prepare"]
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # run copies of the current job in parallel
+        containers: ${{fromJson(needs.get-containers.outputs.containers)}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Chrome Browser run
+        uses: cypress-io/github-action@v4
+        with:
+          #build: npm run build
+          start: npm run
+          browser: chrome
+          wait-on-timeout: 300
+          # config: defaultCommandTimeout=100000,pageLoadTimeout=100000
+          #env: grepTags=@smoke @reg
+          env: grepTags=${{ github.event.inputs.grepTags }}
+          record: true
+          parallel: true
+          ci-build-id: ${{ needs.prepare.outputs.uuid }}
+          spec: ${{ github.event.inputs.specfiles }}
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_keycloakSuperUserPassword: ${{secrets.CYPRESS_KEYCLOAKSUPERUSERPASSWORD}}
+          CYPRESS_environment: ${{ github.event.inputs.environment }}
+          CYPRESS_keycloakSuperUserPasswordtest: ${{secrets.CYPRESS_KEYCLOAKSUPERUSERPASSWORDTEST}}
+          CYPRESS_serviceAccountPasswordtest: ${{secrets.CYPRESS_SERVICEACCOUNTPASSWORDTEST}}
+          CYPRESS_appLoginUser: ${{ github.event.inputs.appLoginUser }}
+          COMMIT_INFO_MESSAGE: ${{ github.event.inputs.run_title }} on ${{ github.event.inputs.environment }} env at UTC${{ steps.date.outputs.date }}
+
+      - name: Upload screenshot for failed Test Scripts
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+
+      # Test run video was always captured, so this action uses "always()" condition
+
+      - name: Upload video artifacts
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
+      # reports was always captured, so this action uses "always()" condition
+
+      - name: Upload report artifacts
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-junit
+          path: cypress/results/junit/**
+
+  cypress-run-dev-env:
+    if: (github.event.inputs.environment == 'dev')
+    runs-on: ubuntu-latest
+    needs: ["get-containers", "prepare"]
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # run copies of the current job in parallel
+        containers: ${{fromJson(needs.get-containers.outputs.containers)}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Chrome Browser run
+        uses: cypress-io/github-action@v4
+        with:
+          #build: npm run build
+          start: npm run
+          browser: chrome
+          wait-on-timeout: 300
+          # config: defaultCommandTimeout=100000,pageLoadTimeout=100000
+          #           env: grepTags=@smoke @reg
+          record: true
+          parallel: true
+          ci-build-id: ${{ needs.prepare.outputs.uuid }}
+          spec: ${{ github.event.inputs.specfiles }}
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_keycloakSuperUserPassword: ${{secrets.CYPRESS_KEYCLOAKSUPERUSERPASSWORD}}
+          CYPRESS_environment: ${{ github.event.inputs.environment }}
+          CYPRESS_keycloakSuperUserPassworddev: ${{secrets.CYPRESS_KEYCLOAKSUPERUSERPASSWORDDEV}}
+          CYPRESS_serviceAccountPassworddev: ${{secrets.CYPRESS_SERVICEACCOUNTPASSWORDDEV}}
+          CYPRESS_appLoginUser: ${{ github.event.inputs.appLoginUser }}
+          COMMIT_INFO_MESSAGE: ${{ github.event.inputs.run_title }} on ${{ github.event.inputs.environment }} env at UTC${{ steps.date.outputs.date }}
+
+      - name: Upload screenshot for failed Test Scripts
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+
+      # Test run video was always captured, so this action uses "always()" condition
+
+      - name: Upload video artifacts
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
+      # reports was always captured, so this action uses "always()" condition
+
+      - name: Upload report artifacts
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-junit
+          path: cypress/results/junit/**

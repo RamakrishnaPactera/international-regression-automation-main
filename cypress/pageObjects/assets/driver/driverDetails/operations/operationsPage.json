@@ -1,0 +1,81 @@
+{
+    "txtFieldReadOnlyAssignedPower": "[data-fieldname='aTractor']",
+    "labelAssignedPower": "[data-fieldnameprop='aTractor'] span",
+    "divOperatingStatus": "[data-fieldname='statusTerm']",
+    "txtDutyStatus": "[name='dutyStatus']",
+    "txtRemHours": "[name='remainingWorkingHours']",
+    "txtNxtReset": "[name='nextResetDate']",
+    "divNxtRoute": "[data-fieldname='nextRoute']",
+    "divAssignPower": "[data-fieldname='aTractor']",
+    "divAssignTrailer": "[data-testid='assigned-trailers']",
+    "divDaysInService": "[data-fieldname='daysInService']",
+    "nextAvail": {
+        "txtCalcDt": "[name='calculatedNextAvailable.dateTime']:eq(0)",
+        "txtCalcTm": "[name='calculatedNextAvailable.dateTime']:eq(1)",
+        "txtCalcCitySt": "[name='calculatedNextAvailable?.location.city']",
+        "txtPrefDt": "[name='preferredNextAvailable.dateTime']:eq(0)",
+        "txtPrefTm": "[name='preferredNextAvailable.dateTime']:eq(1)",
+        "txtPrefCity": "[name='preferredNextAvailable?.location.city']"
+    },
+    "routeList": {
+        "btnRoutLst": "button[role='tab']:contains('Route List')",
+        "routeHash": "[data-thid='Route #']",
+        "ras": "[data-thid='RAS']",
+        "rlc": "[data-thid='RLC']",
+        "routeSeq": "[data-thid='Route Seq']",
+        "customer": "[data-thid='Customer']",
+        "puDate": "[data-thid='PU Date']",
+        "shipper": "[data-thid='Shipper']",
+        "orgCity": "[data-thid='Origin City']",
+        "ost": "[data-thid='OST']",
+        "dist": "[data-thid='DIST']",
+        "stops": "[data-thid='Stops']",
+        "consignee": "[data-thid='Consignee']",
+        "destCity": "[data-thid='Dest City']",
+        "dst": "[data-thid='DST']",
+        "delDate": "[data-thid='Del Date']",
+        "fleet": "[data-thid='Fleet']",
+        "power": "[data-thid='Power']",
+        "trailer": "[data-thid='Trailer ']",
+        "totalCost": "[data-thid='Total Cost']",
+        "txtRoute": "[data-testid='table-column-filter-Route #']",
+        "drpDwnRas": "[data-testid='table-column-filter-RAS'] button",
+        "drpDwnRlc": "[data-testid='table-column-filter-RLC'] button",
+        "drpDwnRouteSeq": "[data-testid='table-column-filter-Route Seq'] button",
+        "txtCustomer": "[data-testid='table-column-filter-Customer'] button",
+        "txtPuDate": "[data-testid='datepicker-input']:eq(0)",
+        "txtShipper": "[data-testid='table-column-filter-Shipper']",
+        "txtOrgCity": "[data-testid='table-column-filter-Origin City']",
+        "drpDwnOst": "[data-testid='table-column-filter-OST'] button",
+        "txtDist": "[data-testid='table-column-filter-DIST']",
+        "txtStops": "[data-testid='table-column-filter-Stops']",
+        "txtConsignee": "[data-testid='table-column-filter-Consignee']",
+        "txtDestCity": "[data-testid='table-column-filter-Dest City']",
+        "drpDwnDst": "[data-testid='table-column-filter-DST'] button",
+        "txtDelDate": "[data-testid='datepicker-input']:eq(1)",
+        "drpDwnFleet": "[data-testid='table-column-filter-Fleet'] button",
+        "txtPower": "[data-testid='table-column-filter-Power']",
+        "txtTrailer": "[data-testid='table-column-filter-Trailer ']",
+        "txtTotalCost": "[data-testid='table-column-filter-Total Cost']"
+    },
+
+    "hosCycleRecap" :{
+        "btnCycleRecap": "button[role='tab']:contains('Cycle Recap')",
+        "colHdrDriving" : "div[role='table'] [data-testid='table-thead'] div[data-thid='driving']",
+        "colHdrOffDuty" : "[data-testid='table-thead'] div[data-thid='offDuty']",
+        "colHdrBreak" : "[data-testid='table-thead'] div[data-thid='break']",
+        "colHdrOnDuty" : "[data-testid='table-thead'] div[data-thid='onDuty']",
+        "lblRuleSet":"div strong:contains('Rule Set:')",
+        "lblLastUpdated":"div strong:contains('Last Updated:')",
+        "lblTotalOnDuty":"div strong:contains('Total on Duty on Current Cycle')"
+    },
+
+    "hosSummary" :{
+        "btnSummary": "button[role='tab']:contains('Summary')"
+    },
+
+    "hosHistory" :{
+        "btnHistory": "button[role='tab']:contains('History')"
+    },
+    "btnAssignTrailer": "[data-testid='assigned-trailers'] button"
+}

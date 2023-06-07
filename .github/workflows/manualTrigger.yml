@@ -1,0 +1,266 @@
+name: International-Regresion Suite Manual trigger
+
+on: 
+  workflow_dispatch:
+    inputs:
+      specfiles:
+        description: Define spec path     
+        required: true
+        default: cypress/e2e/**
+        
+      environment:
+        description: Select Environment
+        required: true
+        type: choice
+        options:
+          - dev.mm100-dev
+          - test.mm100-test
+          - test.td100-td
+        default: test.mm100-test
+      containers:
+        description: 'Containers'
+        required: true
+      run_title:
+        description: Cypress run title
+        required: true
+        default: Manually triggered run
+      grepTags:
+        description: "Test tags E.g @p1 or @driver+@p1"
+        required: false
+      retries:
+        description: Number of re-attempts to be done in case of failure
+        required: true
+        default: 1
+      failRerun:
+        description: "Automatically rerun the failed spec files once the execution is completed"
+        type: choice
+        options:
+          - YES
+          - NO
+        default: YES
+      sendEmail:
+        description: "Send email on completion"
+        type: choice
+        options:
+          - YES
+          - NO
+        default: NO
+
+env:
+  INPUT_ENVIRONMENT: ${{ github.event.inputs.environment }}
+# on:
+#   schedule:
+#     - cron: '*/60 * * * *'
+
+# on:
+#   push: 
+#     branches: [ main ]
+
+jobs:
+  # single job that generates and outputs a unique id with time stamp
+  get-ci-build-id:
+    runs-on: ubuntu-latest
+    outputs:
+      uuid: ${{ steps.uuid.outputs.value }}
+    steps:
+      - name: Generate unique ID
+        id: uuid
+        # take the current commit + timestamp together
+        # the typical value would be something like
+        # "sha-5d3fe...35d3-time-1620841214"
+        run: echo "::set-output name=value::sha-$GITHUB_SHA-time-$(date +"%s")"
+
+      - name: Print unique ID
+        run: echo "generated id ${{ steps.uuid.outputs.value }}"
+  # get-containers:
+  #   name: get-containers
+  #   runs-on: ubuntu-latest
+  #   outputs:
+  #     containers: ${{ steps.set-containers.outputs.containers }}
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: set container
+  #       id: set-containers
+  #       run: |   
+  #         for (( i=1; i <= ${{ github.event.inputs.containers }}; i++ ))
+  #         do
+  #           arr+="$i," 
+  #         done  
+  #         echo "::set-output name=containers::["${arr[@]::-1}"]" 
+  cypress-run:
+    runs-on: ubuntu-latest
+    outputs:
+      failures: ${{ steps.store-failures.outputs.failures }}
+      environment: ${{ steps.environment.outputs.environment }}
+      runId: ${{ steps.runId.outputs.runId }}
+    # needs: ['get-containers', 'get-ci-build-id']
+    needs: ['get-ci-build-id']
+    strategy:
+      fail-fast: false
+      matrix:
+        # run copies of the current job in parallel
+        # containers: ${{fromJson(needs.get-containers.outputs.containers)}}
+        containers: [1] 
+    steps:
+      - name: Get current date time
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H:%M:%S')"
+      - name: Determine environment by splitting input on hyphen
+        id: environment
+        shell: bash
+        run: |
+          env=${{ github.event.inputs.environment }}
+          arr=(${env//-/ })
+          echo "::set-output name=environment::${arr[-1]}"
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
+        with:
+          #build: npm run build
+          config: retries=${{ github.event.inputs.retries }}
+          start: npm run
+          browser: chrome
+          wait-on-timeout: 300
+          # config: defaultCommandTimeout=100000,pageLoadTimeout=100000
+          # env: grepTags=@smoke @reg
+          record: true
+          parallel: true
+          ci-build-id: ${{ needs.get-ci-build-id.outputs.uuid }}
+          # ci-build-id: ${{ sha-$GITHUB_SHA-time-$(date +"%s") }}
+          tag: ${{ steps.environment.outputs.environment }}
+          spec: ${{ github.event.inputs.specfiles }}                
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_keycloakSuperUserPassword: ${{secrets.CYPRESS_KEYCLOAKSUPERUSERPASSWORD}}
+          CYPRESS_environment: ${{ steps.environment.outputs.environment }}
+          CYPRESS_keycloakSuperUserPassworddev: ${{secrets.CYPRESS_KEYCLOAKSUPERUSERPASSWORDDEV}}
+          CYPRESS_serviceAccountPassworddev: ${{secrets.CYPRESS_SERVICEACCOUNTPASSWORDDEV}}
+          CYPRESS_keycloakSuperUserPasswordtest: ${{secrets.CYPRESS_KEYCLOAKSUPERUSERPASSWORDTEST}}
+          CYPRESS_serviceAccountPasswordtest: ${{secrets.CYPRESS_SERVICEACCOUNTPASSWORDTEST}}
+          CYPRESS_appLoginUser: ${{ github.event.inputs.appLoginUser }}
+          COMMIT_INFO_MESSAGE: ${{ github.event.inputs.run_title }} on ${{ github.event.inputs.environment }} env at UTC${{ steps.date.outputs.date }}
+          
+               
+      - name: Upload screenshot for failed Test Scripts
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots           
+
+      - name: Upload video artifacts
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
+
+      - name: Upload junit report artifacts
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-junit
+          path: cypress/results/junit/**
+
+      - name: Upload mochawesome report artifacts
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-mochawesome
+          path: cypress/results/mochawesome/**
+          
+      - name: Upload json report artifacts
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-json
+          path: cypress/results/json/**
+          
+      - name: Read summary.txt
+        id: summary
+        uses: pCYSl5EDgo/cat@master
+        if: ${{ always() && github.event.inputs.sendEmail == 'true' }}
+        with:
+          path: cypress/results/summary/summary.txt
+
+      - name: Read failures.txt
+        id: read-failures
+        uses: pCYSl5EDgo/cat@master
+        if: always()
+        with:
+          path: cypress/results/summary/failures.txt
+      - name: Store failures to git env file
+        id: store-failures
+        if: always()
+        run: |
+          echo "failures=${{ steps.read-failures.outputs.text }}" >> $GITHUB_OUTPUT
+
+      - name: Read runId.txt
+        id: read-run-id
+        uses: pCYSl5EDgo/cat@master
+        if: always()
+        with:
+          path: cypress/results/summary/runId.txt
+      - name: Store runId to git env file
+        id: runId
+        if: always()
+        run: |
+          echo "runId=${{ steps.read-run-id.outputs.text }}" >> $GITHUB_OUTPUT
+
+      - name: Merge all mochawesome json(s)
+        if: always()
+        id: merge-mochawesome
+        run: npx mochawesome-merge cypress/results/mochawesome/*.json > cypress-run${{ steps.read-run-id.outputs.text }}-output.json
+
+      - name: Generate mochawesome html report
+        if: always()
+        id: generate-html
+        run: npx marge cypress-run${{ steps.read-run-id.outputs.text }}-output.json --cdn true
+
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: mochawesome-html
+          path: mochawesome-report  
+
+      - name: Read email distribution list
+        id: emailDistribution
+        uses: pCYSl5EDgo/cat@master
+        if: ${{ always() && github.event.inputs.sendEmail == 'true' }}
+        with:
+          path: ./emailDistribution.txt 
+      
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        if: ${{ always() && github.event.inputs.sendEmail == 'true' }}
+        with:
+          server_address: smtp.office365.com
+          server_port: 587
+          secure: false
+          username: testautomation1@mastery.net
+          password: ${{secrets.CYPRESS_SERVICEACCOUNTPASSWORDTEST}}
+          subject: Cypress Run Id-${{ steps.read-run-id.outputs.text }} - ${{ github.event.inputs.run_title }} - Completed on ${{ steps.environment.outputs.environment }} environment
+          to: ${{ steps.emailDistribution.outputs.text }}
+          from: testautomation1@mastery.net
+          body: ${{ steps.summary.outputs.text }}
+          ignore_cert: true
+          attachments: ./mochawesome-report/*.html
+
+  get-ci-build-id-fail-run:
+    runs-on: ubuntu-latest
+    outputs:
+      uid: ${{ steps.uid.outputs.value }}
+    steps:
+      - name: Generate unique ID
+        id: uid
+        # take the current commit + timestamp together
+        # the typical value would be something like
+        # "sha-5d3fe...35d3-time-1620841214"
+        run: echo "::set-output name=value::sha-$GITHUB_SHA-time-$(date +"%N")"
+
+      - name: Print unique ID
+        run: echo "generated id ${{ steps.uid.outputs.value }}"

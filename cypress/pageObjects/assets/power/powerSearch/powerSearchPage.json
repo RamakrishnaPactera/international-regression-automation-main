@@ -1,0 +1,16 @@
+{
+    "btnDialogClose": "[data-testid='dialog-close']",
+    "btnSearchSubmitPower": "[data-testid='power-search-submit']",
+    "clearSearchBtn": "[data-testid='power-search-clear']",
+    "drpDwnDivision": "label:contains('Division') +button",
+    "drpDwnDriverCode": "[data-fieldname='driverIdentityId']",
+    "drpDwnDriverName": "[data-fieldname='driverName']",
+    "drpDwnType": "[data-fieldname= 'typeTerm']",
+    "expandViewDialogWindow": "[role='dialog']",
+    "linkPower": "[data-cellheader='Power Unit Code']",
+    "tblPowerSearchResults": "[data-testid='powers-search-table']",
+    "txtFieldPowerCode": "[name='powerId']",
+    "txtFieldPowerName": "[name='driverName']",
+    "txtPowerName": "[data-testid='power-name']",
+    "txtPowerUnitCode": "[id='powerId']"
+}

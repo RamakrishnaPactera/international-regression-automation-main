@@ -1,0 +1,17 @@
+{
+  "lanesDownloadIcon": "[data-testid='laneTable'] [data-testid='action-icon-download']",
+  "planLanesMenu": "[data-testid='nav-link-lane']",
+  "planningTab": "[data-testid='base-nav'] button:contains('Planning')",
+  "rateQuoteDownloadIcon": "[data-testid='action-icon-download-rate-quote']",
+  "rateQuoteTab": "[data-table-title='rateQuoteTable'] [data-testid='rateQuotesTab']",
+  "routingGuideTab": "[data-testid='routingGuideTab']",
+  "routingGuideUploadIcon": "[data-testid='action-icon-routing-guide-upload']",
+  "colValueLanesID": "[data-cellheader='Lane ID']",
+  "colValueRoutingGuideCustomer": "[data-cellheader='Customer'] a",
+  "lanesFilter": {
+    "destinationTxtBx": "[name='stops.1.city']",
+    "originCityTxtBx": "[name='stops.0.city']",
+    "searchBtn": "[data-testid='lane-search-submit']",
+    "txtBxLanesFilterCustomer": "[data-testid='customer-search-input']"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "loadMenuTab": "button:contains('Loads')",
+  "searchOption": "[data-testid='nav-link-load-search']",
+  "submitBtn": "[data-testid='load-search-submit']",
+  "nameFieldLinkInResTableLoad": "[data-cellheader='Load #'] > a",
+  "linkrouteNumber": "[data-rowindex='0'] [data-cellheader='Route #']",
+  "loadIdTxtBox": "[name='loadCode']",
+  "routeIdTxtBox": "[name='routeCode']",
+  "loadWindowObj":{
+    "angleUpBtn":"[data-icon='angle-up']",
+    "angleDownBtn":"[data-icon='angle-down']"
+  }
+}

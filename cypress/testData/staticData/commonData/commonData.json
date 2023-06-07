@@ -1,0 +1,41 @@
+{
+  "attributeTitle": "title",
+  "emptyData": "",
+  "longWait": 5000,
+  "maxWait": 10000,
+  "minWait": 1000,
+  "mode": "default",
+  "moreLongWait": 600000,
+  "moreWait": 7000,
+  "primaryValue": "true",
+  "shortWait": 3000,
+  "MinuteWait": 60000,
+  "tdmErrorDescription": "Skipping the test case because TDM was unable to create the data. TDM response : ",
+  "attrPlaceHolder": "placeholder",
+  "back": "back",
+  "txtBlackColor":"Black",
+  "weightVal":"12054",
+  "engineHPVal":"475",
+  "transSpeed":"10",
+  "readEndRatio":"2.47",
+  "wheelBaseVal":"10",
+  "tank1CapacityVal":"100",
+  "tank2CapacityVal":"120",
+  "css": {
+    "genInfoRow": "css-9hj30q",
+    "profInfoRow": "css-8p4zvo",
+    "fleetRow": "css-8p4zvo",
+    "timeOffRow": "css-a3fhkm"
+  },
+  "commonFields": {
+    "equipmentFields": {
+      "type": "Type",
+      "description": "Description",
+      "count": "Count",
+      "assetId": "Asset ID",
+      "issued": "Issued",
+      "recovered": "Recovered",
+      "condition": "Condition"
+    }
+  }
+}

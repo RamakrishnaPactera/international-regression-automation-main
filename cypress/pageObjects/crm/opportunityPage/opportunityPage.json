@@ -1,0 +1,19 @@
+{
+  "btnOpportunityPlus": "[data-testid='crm-opportunities-tablev2'] [data-testid='table-add-new']",
+  "btnSaveNewOpportunity": "[data-testid='save-opportunity']",
+  "dropDwnOpportunityType": "[data-testid='typeTermId']",
+  "opportunityTableFirstRow": "[data-testid='crm-opportunities-tablev2']  [data-testid='table-tbody'] [data-rowindex='0']",
+  "txtOpportunityName": "[data-testid='name']",
+  "dropDwnStageType": "[data-testid='stageTermId']",
+  "dropDwnRepsId": "[data-fieldnameprop='crmOpportunityReps']",
+  "labelOppName": "[data-fieldnameprop='name'] label",
+  "labelOppType": "[data-fieldnameprop='typeTerm'] label",
+  "labelOppStage": "[data-fieldnameprop='stageTerm'] label",
+  "labelOppReps": "[data-fieldnameprop='crmOpportunityReps'] label",
+  "txtOppName": "[data-fieldnameprop='name'] input",
+  "drpDwnCloseReason": "[data-testid='closeReasonId']",
+  "tblStatusdropdown":"[data-testid='crm-opportunities-tablev2'] .css-t6zbl0",
+  "tblRowCellValue":"[data-testid='crm-opportunities-tablev2'] [role='row'] [role='cell'] span"
+}
+  
+

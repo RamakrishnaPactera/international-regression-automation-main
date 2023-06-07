@@ -1,0 +1,10 @@
+{
+  "tableHOSSummary": "[data-testid='driver-form'] div[data-card-title='true']:contains('HOS Summary')",
+  "tablemessageDriver": "[data-testid='driver-form'] div[data-card-title='true']:contains('Message Driver')",
+  "tableUtilization": "[data-testid='driver-form'] div[data-card-title='true'] button:contains('Utilization')",
+  "timeOff": {
+    "colHeaderTimeOff": "[data-testid='driver-ops-capacity-table'] [role='columnheader'] button:first-child",
+    "timeOffEmptyTable": "[data-testid='table-no-data']",
+    "timeOffRowData": "[data-testid='driver-ops-capacity-table'] [role='row']"
+  }
+}
